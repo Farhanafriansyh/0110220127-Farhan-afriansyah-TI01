@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Chatbox javascript</title>
+  <style>
+    body {
+      background-color: white;
+    }
+
+    .result-chat {
+      height: 250px;
+      width: 298px;
+      border: 1px solid;
+      color: black;
+      background-color: white;
+    }
+
+    .kotak {
+      height: 300px;
+      width: 300px;
+      border: 1px solid;
+      color: lightskyblue;
+      background-color: lightskyblue;
+      text-align: top;
+    }
+  </style>
+</head>
+<body>
+  <div class="kotak">
+    <main>
+      <div class="result-chat"></div>
+      <div>
+        <input type="text" class="input-chat" size="28px">
+        <button class="btn-chat">Send</button>
+      </div>
+    </main>
+    <script>
+      let resultChat = document.querySelector(".result-chat");
+      const inputChat = document.querySelector(".input-chat");
+      const btnChat = document.querySelector(".btn-chat");
+
+      btnChat.addEventListener("click", function() {
+        resultChat.innerHTML = resultChat.innerHTML + "<br>" + "Pesan :" + inputChat.value;
+        inputChat.value = "";
+      })
+    </script>
+  </div>
+</body>
+</html>
